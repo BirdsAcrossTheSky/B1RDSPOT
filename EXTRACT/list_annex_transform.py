@@ -4,6 +4,8 @@ from bs4 import BeautifulSoup
 import csv
 
 
+# prawdopodbnie optymalniej bylo by rodzielic web scrap z wiki na czesc pobrania danych i transformacji ?
+# webscrap zajmuje za duzo czasu
 def get_wiki_translation(latin_name):
     url = "https://en.wikipedia.org/wiki/"
     search_url = f"{url}{latin_name.replace(' ', '_')}"
@@ -23,14 +25,13 @@ def get_wiki_translation(latin_name):
 # Read bird names from CSV file (adjust the filename and column name)
 sources = ['list', 'annex']
 latin_column = 'latin name'
-csv_result_filename = 'other/english_names_comparison.csv'
 
 for source in sources:
     # Initialize an empty list for translations
     english_names = []
 
     # Read bird names from CSV
-    df = pd.read_csv(f'{source}.csv')
+    df = pd.read_csv(f'data/imported/{source}.csv')
     latins = df[latin_column]
 
     # Get English translations
@@ -59,6 +60,6 @@ for source in sources:
         df.loc[row_index, 'english name'] = 'Lilac-breasted roller'
 
     # Save translations to a new CSV file
-    df.to_csv(f'{source}_db.csv', index=False, quoting=csv.QUOTE_NONNUMERIC)  # column position will be adjusted in database
+    df.to_csv(f'data/to_db/{source}_db.csv', index=False, quoting=csv.QUOTE_NONNUMERIC)  # column position will be adjusted in database
     print(f'Translations saved to {source}_db.csv.')
 

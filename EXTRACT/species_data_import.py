@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 import csv
 
 
+# dodac tworzenie i obsluge folderow!
 def data_scrape(source):
     response = requests.get(source[1])
     soup = BeautifulSoup(response.content, "html.parser")
@@ -17,7 +18,7 @@ def data_scrape(source):
         data.append(cols)
 
     df = pd.DataFrame(data, columns=source[2])
-    df.to_csv(f'{source[0]}.csv', index=False, header=True, quoting=csv.QUOTE_NONNUMERIC)
+    df.to_csv(f'data/imported/{source[0]}.csv', index=False, header=True, quoting=csv.QUOTE_NONNUMERIC)
     print(f"Data was imported to {source[0]}.csv file")
 
 

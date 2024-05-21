@@ -3,7 +3,7 @@ import csv
 
 
 csv_filename = 'legend.csv'
-legend_df = pd.read_csv(csv_filename)
+legend_df = pd.read_csv(f'data/imported/{csv_filename}')
 
 # Transformation 1
 cols_to_use = [0, 2]
@@ -25,7 +25,7 @@ category_df.rename(columns={category_df.columns[0]: category_column}, inplace=Tr
 status_df.rename(columns={status_df.columns[0]: status_column}, inplace=True)
 
 # Save to csv
-category_df.to_csv('category_db.csv', index=False, quoting=csv.QUOTE_NONNUMERIC)
-status_df.to_csv('status_db.csv', index=False, quoting=csv.QUOTE_NONNUMERIC)
+category_df.to_csv('data/to_db/category_db.csv', index=False, quoting=csv.QUOTE_NONNUMERIC)
+status_df.to_csv('data/to_db/status_db.csv', index=False, quoting=csv.QUOTE_NONNUMERIC)
 
 
