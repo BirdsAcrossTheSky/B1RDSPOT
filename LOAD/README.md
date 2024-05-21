@@ -1,0 +1,1 @@
+Folder for scripts loading web scrapped data to database.
