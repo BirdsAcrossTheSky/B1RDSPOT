@@ -1,1 +1,1 @@
-Folder for scripts loading web scrapped data to database.
+Folder for the entire proccess of web scrapping and staging data.
