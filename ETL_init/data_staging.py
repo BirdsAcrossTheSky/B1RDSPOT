@@ -18,6 +18,8 @@ with psycopg2.connect(**conn_paramas) as conn:
         with conn.cursor() as cur:
             # deleting all the data from table
             del_sql = f"DELETE FROM STAGE.{table_dict['name']}"
+            cur.execute(del_sql)
+
             with open(table_dict['csv'], 'r') as f:
                 next(f)  # skipping the header
                 cur.copy_expert(sql=table_dict['copy_sql'], file=f)
