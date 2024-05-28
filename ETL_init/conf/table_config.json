@@ -1,0 +1,22 @@
+[
+    {
+        "name": "list",
+        "csv": "EXTRACT/data/to_db/list_db.csv",
+        "copy_sql": "COPY STAGE.LIST (LATIN_NAME, POLISH_NAME, ENGLISH_NAME, CATEGORY, STATUS) FROM stdin WITH CSV HEADER DELIMITER as ','"
+    },
+    {
+        "name": "annex",
+        "csv": "EXTRACT/data/to_db/annex_db.csv",
+        "copy_sql": "COPY STAGE.ANNEX (LATIN_NAME, POLISH_NAME, ENGLISH_NAME, CATEGORY, STATUS) FROM stdin WITH CSV HEADER DELIMITER as ','"
+    },
+    {
+        "name": "category",
+        "csv": "EXTRACT/data/to_db/category_db.csv",
+        "copy_sql": "COPY STAGE.CATEGORY (CATEGORY, DESCRIPTION) FROM stdin WITH CSV HEADER DELIMITER as ','"
+    },
+    {
+        "name": "status",
+        "csv": "EXTRACT/data/to_db/status_db.csv",
+        "copy_sql": "COPY STAGE.STATUS (STATUS, DESCRIPTION) FROM stdin WITH CSV HEADER DELIMITER as ','"
+    }
+]
