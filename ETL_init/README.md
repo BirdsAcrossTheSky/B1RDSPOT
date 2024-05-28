@@ -13,6 +13,7 @@ Scripts should be executed in following order:
 	3. *EXTRACT/legend_transform.py*
 
 and after object in database are created:
+
 	4. *data_staging.py*
 
 Additionally, in order to *data_staging.py* work, you need to create *db_config.ini* with connection parameters.
