@@ -1,19 +1,27 @@
 import psycopg2
 import configparser
 import json
-
+import os
 
 # getting connection parameters from .ini config file
 config = configparser.ConfigParser()
 config.read('conf/db_config.ini')
-conn_paramas = config['postgresql']
+
+print(config['postgresql'])
+conn_params = config['postgresql']
 
 # getting table info from .json config_file
 with open('conf/table_config.json') as tab_cfg_f:
     table_dict_list = json.load(tab_cfg_f)
 
+# getting location data from .json file
+location_data_path = 'EXTRACT/data/imported/googlemaps_locations.json'
+with open(location_data_path, 'r', encoding='utf-8') as location_file:
+    location_data = json.load(location_file)
+
 # loading imported data to database
-with psycopg2.connect(**conn_paramas) as conn:
+with psycopg2.connect(**conn_params) as conn:
+    '''# bird species data
     for table_dict in table_dict_list:
         with conn.cursor() as cur:
             # deleting all the data from table
@@ -26,4 +34,14 @@ with psycopg2.connect(**conn_paramas) as conn:
                 print(f"The data was inserted into STAGE.{table_dict['name']}")
 
             conn.commit()
+    '''
+    # location data
+    with conn.cursor() as cur:
+        cur.execute("DELETE FROM STAGE.GOOGLE_MAPS_LOCATION")
+        for feature in location_data['features']:
+            cur.execute("INSERT INTO STAGE.GOOGLE_MAPS_LOCATION (NAME, COORDINATES) VALUES (%s, POINT(%s, %s))",
+                        (feature['properties']['name'], feature['geometry']['coordinates'][0],
+                         feature['geometry']['coordinates'][1]))
+            conn.commit()
+
 
