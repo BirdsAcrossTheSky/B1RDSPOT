@@ -7,7 +7,6 @@ import os
 config = configparser.ConfigParser()
 config.read('conf/db_config.ini')
 
-print(config['postgresql'])
 conn_params = config['postgresql']
 
 # getting table info from .json config_file
@@ -15,13 +14,13 @@ with open('conf/table_config.json') as tab_cfg_f:
     table_dict_list = json.load(tab_cfg_f)
 
 # getting location data from .json file
-location_data_path = 'EXTRACT/data/imported/googlemaps_data.json'
+location_data_path = 'EXTRACT/data/imported/googlemaps_location_data.json'
 with open(location_data_path, 'r', encoding='utf-8') as location_file:
     location_data = json.load(location_file)
 
 # loading imported data to database
 with psycopg2.connect(**conn_params) as conn:
-    '''# bird species data
+    # bird species data
     for table_dict in table_dict_list:
         with conn.cursor() as cur:
             # deleting all the data from table
@@ -34,7 +33,7 @@ with psycopg2.connect(**conn_params) as conn:
                 print(f"The data was inserted into STAGE.{table_dict['name']}")
 
             conn.commit()
-    '''
+
     # location data
     with conn.cursor() as cur:
         cur.execute("DELETE FROM STAGE.GOOGLE_MAPS_LOCATION")
@@ -43,5 +42,6 @@ with psycopg2.connect(**conn_params) as conn:
                         (feature['properties']['name'], feature['geometry']['coordinates'][0],
                          feature['geometry']['coordinates'][1]))
             conn.commit()
+            print(f"The data was inserted into STAGE.GOOGLE_MAPS_LOCATION")
 
 
