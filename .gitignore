@@ -1,5 +1,4 @@
 venv/
 .idea/
 other/
-ETL_init/EXTRACT/data/imported/googlemaps_data.json
 ETL_init/conf/db_config.ini
