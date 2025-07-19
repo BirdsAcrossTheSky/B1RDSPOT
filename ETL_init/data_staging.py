@@ -42,6 +42,6 @@ with psycopg2.connect(**conn_params) as conn:
                         (feature['properties']['name'], feature['geometry']['coordinates'][0],
                          feature['geometry']['coordinates'][1]))
             conn.commit()
-            print(f"The data was inserted into STAGE.GOOGLE_MAPS_LOCATION")
+        print(f"The data was inserted into STAGE.GOOGLE_MAPS_LOCATION")
 
 
