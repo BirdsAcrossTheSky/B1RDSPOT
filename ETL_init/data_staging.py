@@ -15,7 +15,7 @@ with open('conf/table_config.json') as tab_cfg_f:
     table_dict_list = json.load(tab_cfg_f)
 
 # getting location data from .json file
-location_data_path = 'EXTRACT/data/imported/googlemaps_locations.json'
+location_data_path = 'EXTRACT/data/imported/googlemaps_data.json'
 with open(location_data_path, 'r', encoding='utf-8') as location_file:
     location_data = json.load(location_file)
 
