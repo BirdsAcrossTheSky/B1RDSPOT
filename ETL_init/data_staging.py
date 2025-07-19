@@ -1,13 +1,15 @@
 import psycopg2
 import configparser
 import json
-import os
+import datetime
 
 # getting connection parameters from .ini config file
 config = configparser.ConfigParser()
 config.read('conf/db_config.ini')
-
 conn_params = config['postgresql']
+
+# getting stage date
+current_date = datetime.datetime.now().strftime('%Y-%m-%d')
 
 # getting table info from .json config_file
 with open('conf/table_config.json') as tab_cfg_f:
@@ -36,7 +38,7 @@ with psycopg2.connect(**conn_params) as conn:
 
     # location data
     with conn.cursor() as cur:
-        cur.execute("DELETE FROM STAGE.GOOGLE_MAPS_LOCATION")
+        cur.execute(f"DELETE FROM STAGE.GOOGLE_MAPS_LOCATION WHERE STAGEDATE = '{current_date}'")
         for feature in location_data['features']:
             cur.execute("INSERT INTO STAGE.GOOGLE_MAPS_LOCATION (NAME, COORDINATES) VALUES (%s, POINT(%s, %s))",
                         (feature['properties']['name'], feature['geometry']['coordinates'][0],
