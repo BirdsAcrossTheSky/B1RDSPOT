@@ -3,20 +3,6 @@
     {
       "geometry": {
         "coordinates": [
-          20.9554694,
-          52.3182463
-        ],
-        "type": "Point"
-      },
-      "properties": {
-        "address": "Christa Botewa 4, Warszawa, Polska",
-        "name": "Dom"
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [
           21.658047099999997,
           52.6081589
         ],
@@ -36,7 +22,20 @@
         "type": "Point"
       },
       "properties": {
-        "name": "Puszcza Kampinowska - Łóżowa Góra"
+        "name": "Puszcza Kampinoska - Łóżowa Góra"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.718011999999998,
+          52.403817
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "name": "Wisła - Kępy Kazuńskie"
       },
       "type": "Feature"
     },
@@ -50,6 +49,19 @@
       },
       "properties": {
         "name": "Wisła - Łomianki"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.946022499999998,
+          52.325975799999995
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "name": "mieszkanie Strumykowa"
       },
       "type": "Feature"
     },
@@ -88,7 +100,7 @@
         "type": "Point"
       },
       "properties": {
-        "name": "Puszcza Kampinowska - Mokre Łąki"
+        "name": "Puszcza Kampinoska - Mokre Łąki"
       },
       "type": "Feature"
     },
@@ -141,7 +153,7 @@
       },
       "properties": {
         "address": "Chrzanów Mały 20P, 05-825, Polska",
-        "name": "Dom Maćków"
+        "name": "dom Maćków"
       },
       "type": "Feature"
     },
@@ -155,19 +167,6 @@
       },
       "properties": {
         "name": "Stawy Kraśnicza Wola - południe"
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [
-          20.945999999999998,
-          52.326
-        ],
-        "type": "Point"
-      },
-      "properties": {
-        "name": "Mieszkanie - Strumykowa"
       },
       "type": "Feature"
     },
@@ -214,6 +213,19 @@
     {
       "geometry": {
         "coordinates": [
+          20.658953,
+          52.425368
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "name": "Wisła - Sady"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
           20.4441633,
           51.9922669
         ],
@@ -233,7 +245,7 @@
         "type": "Point"
       },
       "properties": {
-        "name": "Stawy Jaktorów - pole zachodnie"
+        "name": "Stawy Jaktorów - pola"
       },
       "type": "Feature"
     },
@@ -246,7 +258,7 @@
         "type": "Point"
       },
       "properties": {
-        "name": "Narew - Ujście Zgorzej Strugi"
+        "name": "Narew - ujście Zgorzej Strugi"
       },
       "type": "Feature"
     },
@@ -266,26 +278,13 @@
     {
       "geometry": {
         "coordinates": [
-          20.956253,
-          52.319328999999996
-        ],
-        "type": "Point"
-      },
-      "properties": {
-        "name": "Garaż"
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [
           20.6989238,
           52.4392527
         ],
         "type": "Point"
       },
       "properties": {
-        "name": "Narew - Ujście Wkry - zachód"
+        "name": "Narew - ujście Wkry - zachód"
       },
       "type": "Feature"
     },
@@ -311,7 +310,7 @@
         "type": "Point"
       },
       "properties": {
-        "name": "Carska Droga - Długa Luka"
+        "name": "Biebrzański PN - Długa Luka"
       },
       "type": "Feature"
     },
@@ -363,7 +362,7 @@
         "type": "Point"
       },
       "properties": {
-        "name": "Działka"
+        "name": "działka"
       },
       "type": "Feature"
     },
@@ -402,7 +401,7 @@
         "type": "Point"
       },
       "properties": {
-        "name": "Puszcza Kampinowska - Palmiry"
+        "name": "Puszcza Kampinoska - Palmiry"
       },
       "type": "Feature"
     },
@@ -467,7 +466,7 @@
         "type": "Point"
       },
       "properties": {
-        "name": "Przystanek Jałowo"
+        "name": "przystanek Jałowo"
       },
       "type": "Feature"
     },
@@ -480,7 +479,20 @@
         "type": "Point"
       },
       "properties": {
-        "name": "Carska Droga - Ścieżka Barwik"
+        "name": "Biebrzański PN - Ścieżka Barwik"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.955052,
+          52.318776
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "name": "dom rodzinny"
       },
       "type": "Feature"
     },
@@ -506,7 +518,7 @@
         "type": "Point"
       },
       "properties": {
-        "name": "Bagno Pulwy"
+        "name": "Bagno Pulwy - południe"
       },
       "type": "Feature"
     },
@@ -532,7 +544,7 @@
         "type": "Point"
       },
       "properties": {
-        "name": "Narew - Ujście Wkry - wschód"
+        "name": "Narew - ujście Wkry - wschód"
       },
       "type": "Feature"
     },
@@ -552,27 +564,26 @@
     {
       "geometry": {
         "coordinates": [
-          20.66924,
-          52.326021
+          20.530837599999998,
+          52.1031264
         ],
         "type": "Point"
       },
       "properties": {
-        "name": "Puszcza Kampinowska - uroczysko Mosionka"
+        "name": "Stawy Jaktorów - wejście"
       },
       "type": "Feature"
     },
     {
       "geometry": {
         "coordinates": [
-          20.6844677,
-          52.266306799999995
+          20.66924,
+          52.326021
         ],
         "type": "Point"
       },
       "properties": {
-        "address": "Parking, Leśna 38, 05-850 Zaborów, Polska",
-        "name": "Kampinos - Łąki Zaborowskie"
+        "name": "Puszcza Kampinoska - uroczysko Mosionka"
       },
       "type": "Feature"
     },
@@ -611,7 +622,20 @@
         "type": "Point"
       },
       "properties": {
-        "name": "Puszcza Kampinowska - pola Zaborów"
+        "name": "Puszcza Kampinoska - pola Zaborów"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          21.8962778,
+          52.1856978
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "name": "Stawy Hodowlane Gołębiówka"
       },
       "type": "Feature"
     },
@@ -637,7 +661,7 @@
         "type": "Point"
       },
       "properties": {
-        "name": "Warsztat - Auto As"
+        "name": "warsztat Auto As"
       },
       "type": "Feature"
     },
@@ -651,6 +675,19 @@
       },
       "properties": {
         "name": "Stawy Głuchów"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.684458499999998,
+          52.266311699999996
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "name": "Puszcza Kampinoska - łąki Zaborowskie"
       },
       "type": "Feature"
     },
@@ -676,7 +713,7 @@
         "type": "Point"
       },
       "properties": {
-        "name": "Bug - Silna - starorzecza"
+        "name": "Bug - Silna"
       },
       "type": "Feature"
     },
@@ -689,7 +726,7 @@
         "type": "Point"
       },
       "properties": {
-        "name": "Bug - Dręszew - łąki"
+        "name": "Bug - Dręszew - zachód"
       },
       "type": "Feature"
     },
@@ -702,7 +739,7 @@
         "type": "Point"
       },
       "properties": {
-        "name": "Puszcza Kampinowska - Wiersze - północ"
+        "name": "Puszcza Kampinoska - Wiersze - północ"
       },
       "type": "Feature"
     },
@@ -813,6 +850,19 @@
     {
       "geometry": {
         "coordinates": [
+          20.9655702,
+          52.4540819
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "name": "Narew - Łąki Wieliszewskie"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
           21.431914499999998,
           52.175862699999996
         ],
@@ -832,7 +882,7 @@
         "type": "Point"
       },
       "properties": {
-        "name": "Bug - Kiełpiniec - starorzecze"
+        "name": "Bug - Kiełpiniec"
       },
       "type": "Feature"
     },
@@ -845,7 +895,7 @@
         "type": "Point"
       },
       "properties": {
-        "name": "Puszcza Kampinowska - Grochalskie Piachy"
+        "name": "Puszcza Kampinoska - Grochalskie Piachy"
       },
       "type": "Feature"
     },
@@ -898,7 +948,7 @@
       },
       "properties": {
         "address": "DW634, Warszawa, Polska",
-        "name": "Lotnisko Chopina - Odloty"
+        "name": "lotnisko Chopina - odloty"
       },
       "type": "Feature"
     },
@@ -911,7 +961,7 @@
         "type": "Point"
       },
       "properties": {
-        "name": "Carska Droga - Strękowa Góra"
+        "name": "Narew - Strękowa Góra"
       },
       "type": "Feature"
     },
@@ -938,7 +988,7 @@
       },
       "properties": {
         "address": "Spiska 16, Warszawa, Polska",
-        "name": "Mieszkanie Babci"
+        "name": "mieszkanie Łukasza Kolczyńskiego"
       },
       "type": "Feature"
     },
@@ -972,19 +1022,6 @@
     {
       "geometry": {
         "coordinates": [
-          20.9853092,
-          52.458107399999996
-        ],
-        "type": "Point"
-      },
-      "properties": {
-        "name": "Narew - Łąki Wieliszewskie"
-      },
-      "type": "Feature"
-    },
-    {
-      "geometry": {
-        "coordinates": [
           20.104532,
           52.0436
         ],
@@ -998,13 +1035,26 @@
     {
       "geometry": {
         "coordinates": [
+          20.8682521,
+          52.374405599999996
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "name": "Wisła - Kiełpin"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
           21.289115,
           52.529754999999994
         ],
         "type": "Point"
       },
       "properties": {
-        "name": "Bug - Dręszew - rzeka"
+        "name": "Bug - Dręszew - północ"
       },
       "type": "Feature"
     },
@@ -1069,7 +1119,7 @@
         "type": "Point"
       },
       "properties": {
-        "name": "Mieszkanie Kolczyńskich"
+        "name": "mieszkanie Kolczyńskich"
       },
       "type": "Feature"
     },
@@ -1089,13 +1139,26 @@
     {
       "geometry": {
         "coordinates": [
+          21.750393199999998,
+          52.659226399999994
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "name": "Bug - Udrzyn"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
           20.717245,
           52.363673
         ],
         "type": "Point"
       },
       "properties": {
-        "name": "Puszcza Kampinowska - Adamówek"
+        "name": "Puszcza Kampinoska - Adamówek"
       },
       "type": "Feature"
     },
@@ -1108,7 +1171,7 @@
         "type": "Point"
       },
       "properties": {
-        "name": "wonski"
+        "name": "mieszkanie wonskiego"
       },
       "type": "Feature"
     },
@@ -1134,7 +1197,7 @@
         "type": "Point"
       },
       "properties": {
-        "name": "Puszcza Kampinowska - Roztoka"
+        "name": "Puszcza Kampinoska - Roztoka"
       },
       "type": "Feature"
     },
@@ -1161,6 +1224,19 @@
       },
       "properties": {
         "name": "Puszcza Kampinoska - Stara Dąbrowa"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.603977999999998,
+          49.449248
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "name": "Pieniny - szczyt Radziejowa"
       },
       "type": "Feature"
     },
@@ -1199,7 +1275,20 @@
         "type": "Point"
       },
       "properties": {
-        "name": "Narew - Grądy-Woniecko - Północ"
+        "name": "Narew - Grądy-Woniecko"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          20.8143016,
+          52.378813699999995
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "name": "Wisła - Pieńków"
       },
       "type": "Feature"
     },
@@ -1252,7 +1341,7 @@
         "type": "Point"
       },
       "properties": {
-        "name": "Puszcza Kampinowska - Kolonia-Sieraków"
+        "name": "Puszcza Kampinoska - Kolonia-Sieraków"
       },
       "type": "Feature"
     },
@@ -1278,7 +1367,7 @@
         "type": "Point"
       },
       "properties": {
-        "name": "Puszcza Kampinowska - Sieraków"
+        "name": "Puszcza Kampinoska - Sieraków"
       },
       "type": "Feature"
     },
@@ -1305,7 +1394,7 @@
         "type": "Point"
       },
       "properties": {
-        "name": "Carska Droga - Grobla Honczarowska"
+        "name": "Biebrzański PN - Grobla Honczarowska"
       },
       "type": "Feature"
     },
@@ -1383,7 +1472,7 @@
         "type": "Point"
       },
       "properties": {
-        "name": "Puszcza Kampinowska - Paśniki"
+        "name": "Puszcza Kampinoska - Paśniki"
       },
       "type": "Feature"
     }
