@@ -26,7 +26,7 @@ with psycopg2.connect(**conn_params) as conn:
     for table_dict in table_dict_list:
         with conn.cursor() as cur:
             # deleting all the data from table
-            del_sql = f"DELETE FROM STAGE.{table_dict['name']}"
+            del_sql = f"DELETE FROM STAGE.{table_dict['name']} WHERE STAGEDATE = '{current_date}'"
             cur.execute(del_sql)
 
             with open(table_dict['csv'], 'r') as f:
