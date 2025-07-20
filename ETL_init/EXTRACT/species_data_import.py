@@ -4,7 +4,6 @@ from bs4 import BeautifulSoup
 import csv
 
 
-# dodac tworzenie i obsluge folderow!
 def data_scrape(source):
     response = requests.get(source[1])
     soup = BeautifulSoup(response.content, "html.parser")

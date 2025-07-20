@@ -53,11 +53,13 @@ for source in sources:
     if source == 'list':
         row_index = df[df['latin name'] == 'Columba livia forma urbana'].index
         df.loc[row_index, 'english name'] = 'Feral pigeon'
+        print('Specie Columba livia forma urbana was handled.')
 
     # Datafix 2
     if source == 'annex':
         row_index = df[df['latin name'] == 'Coracias caudataus'].index
         df.loc[row_index, 'english name'] = 'Lilac-breasted roller'
+        print('Specie Coracias caudataus was handled.')
 
     # Save translations to a new CSV file
     df.to_csv(f'data/to_db/{source}_db.csv', index=False, quoting=csv.QUOTE_NONNUMERIC)  # column position will be adjusted in database
