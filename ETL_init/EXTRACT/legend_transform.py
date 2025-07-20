@@ -26,6 +26,8 @@ status_df.rename(columns={status_df.columns[0]: status_column}, inplace=True)
 
 # Save to csv
 category_df.to_csv('data/to_db/category_db.csv', index=False, quoting=csv.QUOTE_NONNUMERIC)
+print(f'Data saved to category_db.csv.')
 status_df.to_csv('data/to_db/status_db.csv', index=False, quoting=csv.QUOTE_NONNUMERIC)
+print(f'Data saved to status_db.csv.')
 
 

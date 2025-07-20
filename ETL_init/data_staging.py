@@ -30,7 +30,7 @@ with psycopg2.connect(**conn_params) as conn:
             cur.execute(del_sql)
 
             with open(table_dict['csv'], 'r') as f:
-                next(f)  # skipping the header
+                # next(f)  # skipping the header
                 cur.copy_expert(sql=table_dict['copy_sql'], file=f)
                 print(f"The data was inserted into STAGE.{table_dict['name']}")
 
