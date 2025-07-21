@@ -1,0 +1,2 @@
+1. przetestować działanie on_conflict w procesach zasilających DWH
+2. sprawdzić czy da się jakoś podzielić statusy w przypadkach gdy jest więcej niż jeden
