@@ -26,7 +26,8 @@ with open(location_data_path, 'r', encoding='utf-8') as location_file:
 lifers_data_path = 'EXTRACT/data/imported/lifers.csv'
 with open(lifers_data_path, 'r') as lifers_file:
     reader = csv.DictReader(lifers_file)
-    lifers_list = [row['Nazwa gatunku'] for row in reader if row['Nazwa gatunku'] != '']
+    lifers_list = [row['Nazwa gatunku'].rstrip().lower() for row in reader if row['Nazwa gatunku'] != '']
+    print(lifers_list)
 
 # loading imported data to database
 with psycopg2.connect(**conn_params) as conn:

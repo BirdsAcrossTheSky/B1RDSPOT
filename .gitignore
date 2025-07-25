@@ -3,3 +3,4 @@ venv/
 other/
 ETL_init/conf/db_config.ini
 ETL_init/EXTRACT/data/imported/googlemaps_location_data.json
+documentation/to_do.txt
