@@ -1,3 +1,5 @@
+import csv
+
 import psycopg2
 import configparser
 import json
@@ -20,8 +22,15 @@ location_data_path = 'EXTRACT/data/imported/googlemaps_location_data.json'
 with open(location_data_path, 'r', encoding='utf-8') as location_file:
     location_data = json.load(location_file)
 
+# getting lifers data
+lifers_data_path = 'EXTRACT/data/imported/lifers.csv'
+with open(lifers_data_path, 'r') as lifers_file:
+    reader = csv.DictReader(lifers_file)
+    lifers_list = [row['Nazwa gatunku'] for row in reader if row['Nazwa gatunku'] != '']
+
 # loading imported data to database
 with psycopg2.connect(**conn_params) as conn:
+
     # bird species data
     for table_dict in table_dict_list:
         with conn.cursor() as cur:
@@ -43,7 +52,13 @@ with psycopg2.connect(**conn_params) as conn:
             cur.execute("INSERT INTO STAGE.GOOGLE_MAPS_LOCATION (NAME, COORDINATES) VALUES (%s, POINT(%s, %s))",
                         (feature['properties']['name'], feature['geometry']['coordinates'][0],
                          feature['geometry']['coordinates'][1]))
-            conn.commit()
+        conn.commit()
         print(f"The data was inserted into STAGE.GOOGLE_MAPS_LOCATION")
 
-
+    # lifers data
+    with conn.cursor() as cur:
+        cur.execute(f"DELETE FROM STAGE.LIFERS WHERE STAGEDATE = '{current_date}'")
+        for lifer in lifers_list:
+            cur.execute(f"INSERT INTO STAGE.LIFERS (NAME) VALUES ('{lifer}')")
+        conn.commit()
+        print(f"The data was inserted into STAGE.LIFERS")
