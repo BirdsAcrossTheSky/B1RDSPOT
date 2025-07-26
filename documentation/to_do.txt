@@ -1,4 +1,0 @@
-- przetestować działanie on_conflict w procesach zasilających DWH
-- sprawdzić czy da się jakoś podzielić statusy w przypadkach gdy jest więcej niż jeden
-- trigger na obserwacje updateujacy ptaka IS_SEEN = TRUE (jeśli foto lub seen)
-- sprawdzenie right joinem czy wszystkie lifery się dodały + log do procesu
